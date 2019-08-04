@@ -22,8 +22,10 @@ MongoClient.connect(
     app.set("view engine", "ejs");
     app.set("views", path.join(__dirname, "views"));
 
-    app.get("/startups/:id", startupController.renderStartup(db));
-    app.get("/startups", startupController.showAllStartups(db));
+    app.get("/", function(req, res) {res.render("index")})
+    app.get("/events", function(req, res) {res.render("events")})
+    app.get("/teams/:id", startupController.renderStartup(db));
+    app.get("/teams", startupController.showAllStartups(db));
 
     app.get("/siicteam", function(req, res) {
       res.render("siicteam", {});

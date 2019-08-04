@@ -48,28 +48,7 @@
         </div>
       </div>
 
-      <div class="kz-nav-menu">
-        <ul>
-          <li onmouseover="updateNavImage(0)" onmouseout="updateNavImage(-1)">
-            <a href="index.html">Home</a>
-          </li>
-          <li onmouseover="updateNavImage(1)" onmouseout="updateNavImage(-1)">
-            <a href="events.html">What we offer</a>
-          </li>
-          <li onmouseover="updateNavImage(2)" onmouseout="updateNavImage(-1)">
-            <a href="mentors.html">Mentors</a>
-          </li>
-          <li onmouseover="updateNavImage(3)" onmouseout="updateNavImage(-1)">
-            <a href="companies.html">Partners</a>
-          </li>
-          <li onmouseover="updateNavImage(4)" onmouseout="updateNavImage(-1)">
-            <a href="startupnew.html">Facilities</a>
-          </li>
-          <li onmouseover="updateNavImage(3)" onmouseout="updateNavImage(-1)">
-            <a href="teams.html">Team</a>
-          </li>
-        </ul>
-      </div>
+      <%- include navbar.ejs %>
 
       <div class="kz-hero-box">
         <h1>TEAMS</h1>
@@ -101,45 +80,10 @@
       >
 
         <% startups.forEach(startup => { %>
-            <article class="<%= startup.startupField %>">
-            <a href="/startups/<%= startup.id %>"><img src="<%= startup.logoUrl || '../res/img/nav1.jpg' %>" class="img-responsive"></a>
-        </article>
+          <article class="<%= startup.startupField %>">
+            <a href="/teams/<%= startup.id %>"><img src="<%= startup.logoUrl || '../res/img/nav1.jpg' %>" class="img-responsive"></a>
+          </article>
         <% }); %>
-        <!--<article class="robotics aeromodelling marine">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>
-        <article class="random marine">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>
-        <article class="aeromodelling">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>
-        <article class="random robotics automobile aeromodelling">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>
-        <article class="random marine automobile">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>
-        <article class="robotics">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>
-        <article class="marine">
-          <a href="startupnew.html"
-            ><img src="../res/img/nav1.jpg" class="img-responsive"
-          /></a>
-        </article>-->
       </section>
     </section>
 
