@@ -102,7 +102,7 @@
 
         <% startups.forEach(startup => { %>
             <article class="<%= startup.startupField %>">
-            <a href="/startups/<%= startup.id %>"><img src="../res/img/nav1.jpg" class="img-responsive"></a>
+            <a href="/startups/<%= startup.id %>"><img src="<%= startup.logoUrl || '../res/img/nav1.jpg' %>" class="img-responsive"></a>
         </article>
         <% }); %>
         <!--<article class="robotics aeromodelling marine">
